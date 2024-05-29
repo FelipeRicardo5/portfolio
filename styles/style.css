@@ -24,20 +24,32 @@ body {
 }
 
 .cabecalho {
-    padding: 2% 0 0 15%;
+    padding: 2% 55% 1% 15%;
 }
 
 .cabecalho__menu {
+    background-color: #000000;
     display: flex;
     gap: 80px;
+    /* padding: 3.5% 5% 0 5%; */
+    border-radius: 100px;
+    justify-content: center;
+    border: 2px solid #22D4FD;
+    width: auto;
 }
 
 .cabecalho__menu__link {
     font-family: 'Montserrat', sans-serif;
     font-size:  1.5rem;
-    font-weight: 600;
+    font-weight: 400;
     color: #22D4FD;
     text-decoration: none;
+    transition: font-size 0.9s ease, color 0.9s ease;
+    margin: 2%;
+}
+
+.cabecalho__menu__link:hover {
+    font-size: 2rem;
 }
 
 .apresentacao{
