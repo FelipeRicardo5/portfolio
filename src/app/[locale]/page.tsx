@@ -77,21 +77,21 @@ export default async function LocalePage({ params }: { params: Promise<{ locale:
         <SiteHeader locale={locale} content={content} />
         <AppShell sidebar={<SidebarNav content={content} />}>
           <main className="pb-20 md:pb-0">
-            <Panel id="overview">
+            <Panel id="overview" label={locale === "pt-br" ? "Visão Geral" : "Overview"}>
               <HeroSection content={content} />
               <AboutSection content={content} />
               <AdvantageSection content={content} />
             </Panel>
-            <Panel id="experience">
+            <Panel id="experience" label={content.navigation.experience}>
               <ExperiencesSection content={content} />
             </Panel>
-            <Panel id="projects">
+            <Panel id="projects" label={content.navigation.projects}>
               <ProjectsSection content={content} />
             </Panel>
-            <Panel id="skills">
+            <Panel id="skills" label={content.skillsByCategory.title}>
               <SkillsSection content={content} />
             </Panel>
-            <Panel id="contact">
+            <Panel id="contact" label={content.navigation.contact}>
               <ContactSection locale={locale} content={content} />
             </Panel>
           </main>
