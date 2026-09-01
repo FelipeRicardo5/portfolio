@@ -8,6 +8,7 @@ import type { PortfolioContent } from "@/types/portfolio";
 
 export function HeroSection({ content }: { content: PortfolioContent }) {
   const { setActivePanel } = usePanel();
+  const stack = content.skillsByCategory.categories[0]?.skills.slice(0, 3) ?? [];
 
   return (
     <section className="mx-auto grid w-full max-w-6xl items-center gap-10 px-6 pb-16 pt-18 md:grid-cols-[1.1fr_0.9fr] md:px-10 md:pb-24 md:pt-24">
@@ -46,8 +47,16 @@ export function HeroSection({ content }: { content: PortfolioContent }) {
         </p>
         <p className="mt-6 max-w-xl text-base leading-7 text-muted-foreground">{content.hero.subheadline}</p>
         <div className="mt-10 flex flex-wrap gap-3">
-          <Button onClick={() => setActivePanel("projects")}>{content.hero.primaryCta}</Button>
-          <Button variant="ghost" onClick={() => setActivePanel("contact")}>
+          <Button onClick={() => setActivePanel("projects")} className="font-mono">
+            <span aria-hidden className="mr-2 text-white/70">
+              {">"}
+            </span>
+            {content.hero.primaryCta}
+          </Button>
+          <Button variant="ghost" onClick={() => setActivePanel("contact")} className="font-mono">
+            <span aria-hidden className="mr-2 text-muted-foreground">
+              {">"}
+            </span>
             {content.hero.secondaryCta}
           </Button>
         </div>
@@ -59,18 +68,42 @@ export function HeroSection({ content }: { content: PortfolioContent }) {
         transition={{ duration: 0.7, delay: 0.12, ease: [0.2, 0.65, 0.3, 0.9] }}
         className="relative"
       >
-        <div className="relative rounded-3xl border border-border bg-card/80 p-8 shadow-soft backdrop-blur-xl">
-          <div className="mb-4 flex items-center gap-2">
-            <span className="h-2.5 w-2.5 rounded-full bg-accent" />
-            <span className="h-2.5 w-2.5 rounded-full bg-white/35" />
-            <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
+        <p className="mb-3 font-mono text-xs text-muted-foreground">
+          <span className="text-accent">$</span> curl -s api.felipericardo.dev/v1/engineer
+        </p>
+        <div className="relative rounded-3xl border border-border bg-card/80 p-6 shadow-soft backdrop-blur-xl">
+          <div className="mb-4 flex items-center justify-between">
+            <div className="flex items-center gap-2 font-mono text-xs">
+              <span className="rounded-md bg-accent/15 px-2 py-1 font-semibold text-accent">GET</span>
+              <span className="text-foreground/90">/v1/engineer</span>
+            </div>
+            <span className="rounded-full bg-accent-green/15 px-2.5 py-1 font-mono text-[11px] font-semibold text-accent-green">
+              200 OK
+            </span>
           </div>
-          <div className="space-y-3 font-mono text-xs text-foreground/90">
-            <p>{"const engineer = {"}</p>
-            <p className="pl-4">{`name: "Felipe Ricardo",`}</p>
-            <p className="pl-4">{`focus: ["Performance", "Scalability", "Execution"],`}</p>
-            <p className="pl-4">{`strength: "Communication + Delivery"`}</p>
-            <p>{"};"}</p>
+          <div className="space-y-1.5 font-mono text-xs leading-6 text-foreground/90">
+            <p>{"{"}</p>
+            <p className="pl-4">
+              <span className="text-accent">&quot;name&quot;</span>: <span className="text-accent-cyan">&quot;{content.hero.name}&quot;</span>,
+            </p>
+            <p className="pl-4">
+              <span className="text-accent">&quot;role&quot;</span>: <span className="text-accent-cyan">&quot;{content.hero.role}&quot;</span>,
+            </p>
+            <p className="pl-4">
+              <span className="text-accent">&quot;stack&quot;</span>:{" "}
+              [
+              {stack.map((tech, index) => (
+                <span key={tech}>
+                  <span className="text-accent-cyan">&quot;{tech}&quot;</span>
+                  {index < stack.length - 1 ? ", " : ""}
+                </span>
+              ))}
+              ],
+            </p>
+            <p className="pl-4">
+              <span className="text-accent">&quot;status&quot;</span>: <span className="text-accent-green">200</span>
+            </p>
+            <p>{"}"}</p>
           </div>
         </div>
       </motion.div>
