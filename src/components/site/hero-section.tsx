@@ -2,10 +2,13 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { usePanel } from "@/components/site/panel-context";
 import { Button } from "@/components/ui/button";
 import type { PortfolioContent } from "@/types/portfolio";
 
 export function HeroSection({ content }: { content: PortfolioContent }) {
+  const { setActivePanel } = usePanel();
+
   return (
     <section id="hero" className="mx-auto grid w-full max-w-6xl scroll-mt-24 items-center gap-10 px-6 pb-16 pt-18 md:grid-cols-[1.1fr_0.9fr] md:px-10 md:pb-24 md:pt-24">
       <motion.div
@@ -43,13 +46,8 @@ export function HeroSection({ content }: { content: PortfolioContent }) {
         </p>
         <p className="mt-6 max-w-xl text-base leading-7 text-muted-foreground">{content.hero.subheadline}</p>
         <div className="mt-10 flex flex-wrap gap-3">
-          <Button onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}>
-            {content.hero.primaryCta}
-          </Button>
-          <Button
-            variant="ghost"
-            onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
-          >
+          <Button onClick={() => setActivePanel("projects")}>{content.hero.primaryCta}</Button>
+          <Button variant="ghost" onClick={() => setActivePanel("contact")}>
             {content.hero.secondaryCta}
           </Button>
         </div>

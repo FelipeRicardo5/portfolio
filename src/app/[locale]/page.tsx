@@ -7,6 +7,8 @@ import { BackgroundEffects } from "@/components/site/background-effects";
 import { ContactSection } from "@/components/site/contact-section";
 import { ExperiencesSection } from "@/components/site/experiences-section";
 import { HeroSection } from "@/components/site/hero-section";
+import { Panel } from "@/components/site/panel";
+import { PanelProvider } from "@/components/site/panel-context";
 import { ProjectsSection } from "@/components/site/projects-section";
 import { SidebarNav } from "@/components/site/sidebar-nav";
 import { SiteFooter } from "@/components/site/site-footer";
@@ -70,18 +72,30 @@ export default async function LocalePage({ params }: { params: Promise<{ locale:
   return (
     <div className="relative" lang={locale === "pt-br" ? "pt-BR" : "en"}>
       <BackgroundEffects />
-      <SiteHeader locale={locale} content={content} />
-      <AppShell sidebar={<SidebarNav content={content} />}>
-        <main>
-          <HeroSection content={content} />
-          <AboutSection content={content} />
-          <ExperiencesSection content={content} />
-          <ProjectsSection content={content} />
-          <SkillsSection content={content} />
-          <AdvantageSection content={content} />
-          <ContactSection locale={locale} content={content} />
-        </main>
-      </AppShell>
+      <PanelProvider>
+        <SiteHeader locale={locale} content={content} />
+        <AppShell sidebar={<SidebarNav content={content} />}>
+          <main>
+            <Panel id="overview">
+              <HeroSection content={content} />
+              <AboutSection content={content} />
+              <AdvantageSection content={content} />
+            </Panel>
+            <Panel id="experience">
+              <ExperiencesSection content={content} />
+            </Panel>
+            <Panel id="projects">
+              <ProjectsSection content={content} />
+            </Panel>
+            <Panel id="skills">
+              <SkillsSection content={content} />
+            </Panel>
+            <Panel id="contact">
+              <ContactSection locale={locale} content={content} />
+            </Panel>
+          </main>
+        </AppShell>
+      </PanelProvider>
       <SiteFooter content={content} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
     </div>
