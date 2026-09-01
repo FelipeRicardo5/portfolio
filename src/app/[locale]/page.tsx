@@ -2,6 +2,7 @@
 import { notFound } from "next/navigation";
 import { AboutSection } from "@/components/site/about-section";
 import { AdvantageSection } from "@/components/site/advantage-section";
+import { AppShell } from "@/components/site/app-shell";
 import { BackgroundEffects } from "@/components/site/background-effects";
 import { ContactSection } from "@/components/site/contact-section";
 import { ExperiencesSection } from "@/components/site/experiences-section";
@@ -69,15 +70,40 @@ export default async function LocalePage({ params }: { params: Promise<{ locale:
     <div className="relative" lang={locale === "pt-br" ? "pt-BR" : "en"}>
       <BackgroundEffects />
       <SiteHeader locale={locale} content={content} />
-      <main>
-        <HeroSection content={content} />
-        <AboutSection content={content} />
-        <ExperiencesSection content={content} />
-        <ProjectsSection content={content} />
-        <SkillsSection content={content} />
-        <AdvantageSection content={content} />
-        <ContactSection locale={locale} content={content} />
-      </main>
+      <AppShell
+        sidebar={
+          <nav className="flex flex-col gap-1 text-sm text-muted-foreground">
+            <span className="mb-3 px-3 text-xs font-semibold tracking-[0.16em] uppercase text-muted-foreground/70">
+              {content.navigation.experience === "Experience" ? "Overview" : "Visão Geral"}
+            </span>
+            <a href="#hero" className="rounded-lg px-3 py-2 transition hover:bg-card/70 hover:text-foreground">
+              {content.hero.role}
+            </a>
+            <a href="#experience" className="rounded-lg px-3 py-2 transition hover:bg-card/70 hover:text-foreground">
+              {content.navigation.experience}
+            </a>
+            <a href="#projects" className="rounded-lg px-3 py-2 transition hover:bg-card/70 hover:text-foreground">
+              {content.navigation.projects}
+            </a>
+            <a href="#skills" className="rounded-lg px-3 py-2 transition hover:bg-card/70 hover:text-foreground">
+              {content.skillsByCategory.title}
+            </a>
+            <a href="#contact" className="rounded-lg px-3 py-2 transition hover:bg-card/70 hover:text-foreground">
+              {content.navigation.contact}
+            </a>
+          </nav>
+        }
+      >
+        <main>
+          <HeroSection content={content} />
+          <AboutSection content={content} />
+          <ExperiencesSection content={content} />
+          <ProjectsSection content={content} />
+          <SkillsSection content={content} />
+          <AdvantageSection content={content} />
+          <ContactSection locale={locale} content={content} />
+        </main>
+      </AppShell>
       <SiteFooter content={content} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
     </div>

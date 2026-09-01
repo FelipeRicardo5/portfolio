@@ -5,7 +5,7 @@ import type { PortfolioContent } from "@/types/portfolio";
 
 export function SkillsSection({ content }: { content: PortfolioContent }) {
   return (
-    <SectionShell>
+    <SectionShell id="skills" className="scroll-mt-24">
       <Reveal>
         <h2 className="text-3xl font-semibold tracking-tight text-foreground">{content.skillsByCategory.title}</h2>
       </Reveal>

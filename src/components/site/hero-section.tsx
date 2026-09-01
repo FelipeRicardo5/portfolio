@@ -7,7 +7,7 @@ import type { PortfolioContent } from "@/types/portfolio";
 
 export function HeroSection({ content }: { content: PortfolioContent }) {
   return (
-    <section className="mx-auto grid w-full max-w-6xl items-center gap-10 px-6 pb-16 pt-18 md:grid-cols-[1.1fr_0.9fr] md:px-10 md:pb-24 md:pt-24">
+    <section id="hero" className="mx-auto grid w-full max-w-6xl scroll-mt-24 items-center gap-10 px-6 pb-16 pt-18 md:grid-cols-[1.1fr_0.9fr] md:px-10 md:pb-24 md:pt-24">
       <motion.div
         initial={{ opacity: 0, y: 26 }}
         animate={{ opacity: 1, y: 0 }}
