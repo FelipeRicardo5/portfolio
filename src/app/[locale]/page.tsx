@@ -8,6 +8,7 @@ import { ContactSection } from "@/components/site/contact-section";
 import { ExperiencesSection } from "@/components/site/experiences-section";
 import { HeroSection } from "@/components/site/hero-section";
 import { ProjectsSection } from "@/components/site/projects-section";
+import { SidebarNav } from "@/components/site/sidebar-nav";
 import { SiteFooter } from "@/components/site/site-footer";
 import { SiteHeader } from "@/components/site/site-header";
 import { SkillsSection } from "@/components/site/skills-section";
@@ -70,30 +71,7 @@ export default async function LocalePage({ params }: { params: Promise<{ locale:
     <div className="relative" lang={locale === "pt-br" ? "pt-BR" : "en"}>
       <BackgroundEffects />
       <SiteHeader locale={locale} content={content} />
-      <AppShell
-        sidebar={
-          <nav className="flex flex-col gap-1 text-sm text-muted-foreground">
-            <span className="mb-3 px-3 text-xs font-semibold tracking-[0.16em] uppercase text-muted-foreground/70">
-              {content.navigation.experience === "Experience" ? "Overview" : "Visão Geral"}
-            </span>
-            <a href="#hero" className="rounded-lg px-3 py-2 transition hover:bg-card/70 hover:text-foreground">
-              {content.hero.role}
-            </a>
-            <a href="#experience" className="rounded-lg px-3 py-2 transition hover:bg-card/70 hover:text-foreground">
-              {content.navigation.experience}
-            </a>
-            <a href="#projects" className="rounded-lg px-3 py-2 transition hover:bg-card/70 hover:text-foreground">
-              {content.navigation.projects}
-            </a>
-            <a href="#skills" className="rounded-lg px-3 py-2 transition hover:bg-card/70 hover:text-foreground">
-              {content.skillsByCategory.title}
-            </a>
-            <a href="#contact" className="rounded-lg px-3 py-2 transition hover:bg-card/70 hover:text-foreground">
-              {content.navigation.contact}
-            </a>
-          </nav>
-        }
-      >
+      <AppShell sidebar={<SidebarNav content={content} />}>
         <main>
           <HeroSection content={content} />
           <AboutSection content={content} />
