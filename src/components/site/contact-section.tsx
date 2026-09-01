@@ -1,5 +1,6 @@
 ﻿import { Reveal } from "@/components/motion/reveal";
 import { ContactForm } from "@/components/site/contact-form";
+import { MethodTag } from "@/components/site/method-tag";
 import { SectionShell } from "@/components/site/section-shell";
 import type { Locale, PortfolioContent } from "@/types/portfolio";
 
@@ -7,6 +8,7 @@ export function ContactSection({ locale, content }: { locale: Locale; content: P
   return (
     <SectionShell className="pb-20">
       <Reveal>
+        <MethodTag method="POST" path="/contact" />
         <h2 className="max-w-3xl text-3xl leading-tight font-semibold tracking-tight text-foreground">{content.cta.title}</h2>
         <p className="mt-4 text-lg text-muted-foreground">{content.cta.body}</p>
         <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-muted-foreground">

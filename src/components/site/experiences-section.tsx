@@ -1,4 +1,5 @@
 ﻿import { Reveal } from "@/components/motion/reveal";
+import { MethodTag } from "@/components/site/method-tag";
 import { SectionShell } from "@/components/site/section-shell";
 import { Card } from "@/components/ui/card";
 import type { PortfolioContent } from "@/types/portfolio";
@@ -7,6 +8,7 @@ export function ExperiencesSection({ content }: { content: PortfolioContent }) {
   return (
     <SectionShell>
       <Reveal>
+        <MethodTag method="GET" path="/experience" />
         <h2 className="text-3xl font-semibold tracking-tight text-foreground">{content.experiences.title}</h2>
         <p className="mt-4 max-w-3xl text-base leading-7 text-muted-foreground">{content.experiences.description}</p>
       </Reveal>

@@ -1,4 +1,5 @@
 ﻿import { Reveal } from "@/components/motion/reveal";
+import { MethodTag } from "@/components/site/method-tag";
 import { SectionShell } from "@/components/site/section-shell";
 import { Card } from "@/components/ui/card";
 import type { PortfolioContent } from "@/types/portfolio";
@@ -7,6 +8,7 @@ export function SkillsSection({ content }: { content: PortfolioContent }) {
   return (
     <SectionShell>
       <Reveal>
+        <MethodTag method="GET" path="/skills" />
         <h2 className="text-3xl font-semibold tracking-tight text-foreground">{content.skillsByCategory.title}</h2>
       </Reveal>
       <div className="mt-10 grid gap-4 md:grid-cols-2">
