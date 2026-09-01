@@ -19,52 +19,44 @@ export function HeroSection({ content }: { content: PortfolioContent }) {
       >
         <p className="mb-4 text-xs font-semibold tracking-[0.24em] text-muted-foreground uppercase">{content.hero.role}</p>
         <div className="flex flex-wrap items-end gap-4">
-          <div className="relative">
-            <div className="group relative h-24 w-24 overflow-hidden rounded-2xl border border-border shadow-soft">
-              <Image
-                src="/profileDraw.jpg"
-                alt="Felipe Ricardo profile drawing"
-                fill
-                sizes="96px"
-                className="object-cover transition-opacity duration-300 group-hover:opacity-0"
-                priority
-              />
-              <Image
-                src="/profile.png"
-                alt="Felipe Ricardo profile"
-                fill
-                sizes="96px"
-                className="object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                priority
-              />
-            </div>
-            <div
-              aria-hidden
-              className="pointer-events-none absolute -top-9 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-1 sm:flex"
-            >
-              <span className="font-mono text-[11px] whitespace-nowrap text-muted-foreground">
-                {content.locale === "pt-br" ? "passe o mouse aqui!" : "hover here!"}
-              </span>
-              <svg
-                width="14"
-                height="14"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="text-muted-foreground"
-              >
-                <path d="M12 4v14" />
-                <path d="M6 12l6 6 6-6" />
-              </svg>
-            </div>
+          <div className="group relative h-24 w-24 overflow-hidden rounded-2xl border border-border shadow-soft">
+            <Image
+              src="/profileDraw.jpg"
+              alt="Felipe Ricardo profile drawing"
+              fill
+              sizes="96px"
+              className="object-cover transition-opacity duration-300 group-hover:opacity-0"
+              priority
+            />
+            <Image
+              src="/profile.png"
+              alt="Felipe Ricardo profile"
+              fill
+              sizes="96px"
+              className="object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+              priority
+            />
           </div>
           <h1 className="max-w-xl text-5xl leading-[1.02] font-semibold tracking-tight text-foreground sm:text-6xl">
             {content.hero.name}
           </h1>
         </div>
+        <p aria-hidden className="mt-2 flex items-center gap-1.5 font-mono text-[11px] text-muted-foreground">
+          <svg
+            width="12"
+            height="12"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M12 20V6" />
+            <path d="M6 12l6-6 6 6" />
+          </svg>
+          {content.locale === "pt-br" ? "passe o mouse aqui!" : "hover here!"}
+        </p>
         <p className="mt-6 max-w-2xl text-2xl leading-tight font-medium text-foreground/92 sm:text-3xl">
           {content.hero.headline}
         </p>
