@@ -4,9 +4,9 @@ export const portfolioContent: Record<"en" | "pt-br", PortfolioContent> = {
   en: {
     locale: "en",
     seo: {
-      title: "Felipe Ricardo | Back-end Developer",
+      title: "Felipe Ricardo | Full Stack Engineer",
       description:
-        "Back-end Developer specialized in Python, building scalable RESTful APIs and event-driven microservices.",
+        "Full Stack Engineer specialized in Python back-end (FastAPI, Django, Flask) building scalable APIs and modern interfaces.",
     },
     navigation: {
       experience: "Experience",
@@ -17,10 +17,10 @@ export const portfolioContent: Record<"en" | "pt-br", PortfolioContent> = {
     },
     hero: {
       name: "Felipe Ricardo",
-      role: "Back-end Developer",
+      role: "Full Stack Engineer",
       headline: "Building scalable, event-driven APIs with Python.",
       subheadline:
-        "I design and deliver resilient backend systems, RESTful APIs, and microservices with FastAPI, Django, and Flask — with a solid grounding in modern frontend tooling as well.",
+        "I design and deliver resilient backend systems, RESTful APIs, and microservices with FastAPI, Django, and Flask — with practical full stack range through modern frontend tooling as well.",
       primaryCta: "View Projects",
       secondaryCta: "Contact Me",
     },
@@ -140,7 +140,7 @@ export const portfolioContent: Record<"en" | "pt-br", PortfolioContent> = {
       body: "Beyond coding, I communicate technology clearly — including sensitive topics like LGPD compliance and data handling. I translate complex technical decisions into practical actions that help teams move faster and ship with confidence.",
     },
     cta: {
-      title: "Looking for a technical, adaptable Back-end Developer ready to deliver?",
+      title: "Looking for a technical, adaptable Full Stack Engineer ready to deliver?",
       body: "Let's talk.",
       submitLabel: "Send Message",
       sendingLabel: "Sending...",
@@ -165,9 +165,9 @@ export const portfolioContent: Record<"en" | "pt-br", PortfolioContent> = {
   "pt-br": {
     locale: "pt-br",
     seo: {
-      title: "Felipe Ricardo | Desenvolvedor Back-end",
+      title: "Felipe Ricardo | Engenheiro Full Stack",
       description:
-        "Desenvolvedor Back-end Python construindo APIs RESTful escaláveis e microsserviços orientados a eventos.",
+        "Engenheiro Full Stack especializado em back-end Python (FastAPI, Django, Flask), construindo APIs escaláveis e interfaces modernas.",
     },
     navigation: {
       experience: "Experiência",
@@ -178,10 +178,10 @@ export const portfolioContent: Record<"en" | "pt-br", PortfolioContent> = {
     },
     hero: {
       name: "Felipe Ricardo",
-      role: "Desenvolvedor Back-end",
+      role: "Engenheiro Full Stack",
       headline: "Construindo APIs RESTful escaláveis e orientadas a eventos com Python.",
       subheadline:
-        "Projeto e entrego sistemas backend resilientes, APIs RESTful e microsserviços com FastAPI, Django e Flask — com base sólida também em ferramentas modernas de frontend.",
+        "Projeto e entrego sistemas backend resilientes, APIs RESTful e microsserviços com FastAPI, Django e Flask — com atuação full stack prática também em ferramentas modernas de frontend.",
       primaryCta: "Ver Projetos",
       secondaryCta: "Entrar em Contato",
     },
@@ -301,7 +301,7 @@ export const portfolioContent: Record<"en" | "pt-br", PortfolioContent> = {
       body: "Além de programar, comunico tecnologia com clareza — inclusive temas sensíveis como conformidade com a LGPD e tratamento de dados. Traduzo decisões técnicas complexas em ações práticas que aceleram times e geram entregas confiáveis.",
     },
     cta: {
-      title: "Procurando um Desenvolvedor Back-end técnico, adaptável e pronto para entregar?",
+      title: "Procurando um Engenheiro Full Stack técnico, adaptável e pronto para entregar?",
       body: "Vamos conversar.",
       submitLabel: "Enviar Mensagem",
       sendingLabel: "Enviando...",
