@@ -22,7 +22,7 @@ export function HeroSection({ content }: { content: PortfolioContent }) {
        
           <div className="group relative h-24 w-24 overflow-hidden rounded-2xl border border-border shadow-soft">
             <Image
-              src="/profile.jpg"
+              src="/profile.png"
               alt="Felipe Ricardo profile"
               fill
               sizes="96px"
@@ -30,7 +30,7 @@ export function HeroSection({ content }: { content: PortfolioContent }) {
               priority
             />
             <Image
-              src="/profileDraw.png"
+              src="/profileDraw.jpg"
               alt="Felipe Ricardo profile drawing"
               fill
               sizes="96px"
