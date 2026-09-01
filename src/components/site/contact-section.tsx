@@ -5,7 +5,7 @@ import type { Locale, PortfolioContent } from "@/types/portfolio";
 
 export function ContactSection({ locale, content }: { locale: Locale; content: PortfolioContent }) {
   return (
-    <SectionShell id="contact" className="scroll-mt-24 pb-20">
+    <SectionShell className="pb-20">
       <Reveal>
         <h2 className="max-w-3xl text-3xl leading-tight font-semibold tracking-tight text-foreground">{content.cta.title}</h2>
         <p className="mt-4 text-lg text-muted-foreground">{content.cta.body}</p>
