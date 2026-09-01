@@ -5,12 +5,18 @@ import type { PortfolioContent, Project } from "@/types/portfolio";
 export function ProjectCard({ project, labels }: { project: Project; labels: PortfolioContent["projects"] }) {
   return (
     <Card className="group flex h-full flex-col">
-      <h3 className="text-xl font-semibold text-foreground">{project.title}</h3>
+      <p className="font-mono text-[11px] text-muted-foreground">
+        <span className="text-accent-blue">GET</span> /projects/{project.id}
+      </p>
+      <h3 className="mt-2 text-xl font-semibold text-foreground">{project.title}</h3>
       <p className="mt-3 text-sm leading-7 text-muted-foreground">{project.summary}</p>
 
       <div className="mt-5 flex flex-wrap gap-2">
         {project.tech.map((item) => (
-          <span key={item} className="rounded-full border border-border bg-background/50 px-3 py-1 text-xs text-muted-foreground">
+          <span
+            key={item}
+            className="rounded-md border border-accent-blue/20 bg-accent-blue/10 px-2.5 py-1 font-mono text-[11px] text-accent-blue"
+          >
             {item}
           </span>
         ))}
@@ -48,7 +54,7 @@ export function ProjectCard({ project, labels }: { project: Project; labels: Por
             href={project.liveUrl}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-2 rounded-full border border-border px-4 py-2 text-xs font-medium text-foreground transition hover:border-accent hover:text-accent"
+            className="inline-flex items-center gap-2 rounded-full border border-accent-green/30 bg-accent-green/10 px-4 py-2 text-xs font-medium text-accent-green transition hover:border-accent-green/60"
           >
             <ExternalLink className="h-3.5 w-3.5" />
             {labels.liveLabel}
