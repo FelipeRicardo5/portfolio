@@ -7,6 +7,7 @@ import { BackgroundEffects } from "@/components/site/background-effects";
 import { ContactSection } from "@/components/site/contact-section";
 import { ExperiencesSection } from "@/components/site/experiences-section";
 import { HeroSection } from "@/components/site/hero-section";
+import { MobileNav } from "@/components/site/mobile-nav";
 import { Panel } from "@/components/site/panel";
 import { PanelProvider } from "@/components/site/panel-context";
 import { ProjectsSection } from "@/components/site/projects-section";
@@ -75,7 +76,7 @@ export default async function LocalePage({ params }: { params: Promise<{ locale:
       <PanelProvider>
         <SiteHeader locale={locale} content={content} />
         <AppShell sidebar={<SidebarNav content={content} />}>
-          <main>
+          <main className="pb-20 md:pb-0">
             <Panel id="overview">
               <HeroSection content={content} />
               <AboutSection content={content} />
@@ -95,6 +96,7 @@ export default async function LocalePage({ params }: { params: Promise<{ locale:
             </Panel>
           </main>
         </AppShell>
+        <MobileNav content={content} />
       </PanelProvider>
       <SiteFooter content={content} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
