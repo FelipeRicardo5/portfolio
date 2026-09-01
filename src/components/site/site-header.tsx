@@ -1,7 +1,4 @@
-﻿"use client";
-
-import Link from "next/link";
-import { usePanel } from "@/components/site/panel-context";
+﻿import Link from "next/link";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { buttonVariants } from "@/components/ui/button";
 import { getOppositeLocale } from "@/lib/i18n";
@@ -10,7 +7,6 @@ import type { Locale, PortfolioContent } from "@/types/portfolio";
 
 export function SiteHeader({ locale, content }: { locale: Locale; content: PortfolioContent }) {
   const otherLocale = getOppositeLocale(locale);
-  const { setActivePanel } = usePanel();
 
   return (
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur-xl">
@@ -19,27 +15,6 @@ export function SiteHeader({ locale, content }: { locale: Locale; content: Portf
           Felipe Ricardo
         </Link>
         <nav className="flex items-center gap-2">
-          <button
-            type="button"
-            onClick={() => setActivePanel("experience")}
-            className="px-3 py-2 text-sm text-muted-foreground transition hover:text-foreground"
-          >
-            {content.navigation.experience}
-          </button>
-          <button
-            type="button"
-            onClick={() => setActivePanel("projects")}
-            className="px-3 py-2 text-sm text-muted-foreground transition hover:text-foreground"
-          >
-            {content.navigation.projects}
-          </button>
-          <button
-            type="button"
-            onClick={() => setActivePanel("contact")}
-            className="px-3 py-2 text-sm text-muted-foreground transition hover:text-foreground"
-          >
-            {content.navigation.contact}
-          </button>
           <Link href={`/${otherLocale}`} className="px-3 py-2 text-sm text-muted-foreground transition hover:text-foreground">
             {content.navigation.switchLocale}
           </Link>
