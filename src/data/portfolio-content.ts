@@ -20,13 +20,13 @@ export const portfolioContent: Record<"en" | "pt-br", PortfolioContent> = {
       role: "Full Stack Engineer",
       headline: "Building scalable, event-driven APIs and modern interfaces.",
       subheadline:
-        "I design and deliver resilient backend systems, RESTful APIs, and microservices with FastAPI, Django, and Flask — with practical full stack range through modern frontend tooling as well.",
+        "I design and deliver resilient backend systems, RESTful APIs, and microservices with FastAPI/Django (Python) and NestJS/Express (Node.js) — with hands-on full stack range through React and Next.js on the frontend.",
       primaryCta: "View Projects",
       secondaryCta: "Contact Me",
     },
     about: {
       title: "About",
-      body: "Felipe Ricardo is a Back-end Developer based in Recife, Pernambuco, Brazil, with experience building scalable, performant, event-driven RESTful APIs for the iGaming industry. I work with FastAPI, Flask, and Django to design and version services, handle authentication and validation, and apply clean architecture with system integration through RabbitMQ and Redis. I document APIs with Swagger/OpenAPI, ensure LGPD compliance when handling sensitive data, write automated tests with Pytest, and work within agile teams (Scrum/Kanban). I also have training in TypeScript, React, and Next.js, which gives me a practical understanding of the frontend when collaborating with those teams.",
+      body: "Felipe Ricardo is a Full Stack Developer based in Recife, Pernambuco, Brazil, building scalable, event-driven RESTful APIs and real-time systems for the iGaming industry with both Python (FastAPI, Flask, Django) and Node.js (NestJS, Express). I architect SPA frontends with React and TypeScript, ship real-time features with WebSockets, and integrate systems through RabbitMQ and Redis. I document APIs with Swagger/OpenAPI, ensure LGPD compliance when handling sensitive data, write automated tests with Pytest and Vitest/React Testing Library, and work within agile teams (Scrum/Kanban).",
     },
     experiences: {
       title: "Professional Experience",
@@ -36,17 +36,19 @@ export const portfolioContent: Record<"en" | "pt-br", PortfolioContent> = {
         {
           id: "bsa-corp",
           company: "BSA Corp",
-          role: "Back-end Developer - Python",
+          role: "Full Stack Developer - Python & Node.js",
           start: "September 2025 - Present",
           description:
             "I develop business-driven technology solutions for Responsible Gambling in the iGaming industry, supporting the Customer Service and BetAssist teams.",
           highlights: [
-            "I implement RESTful APIs in Python to monitor high-risk players and automate preventive actions.",
+            "I implement RESTful APIs in Python and Node.js to monitor high-risk players and automate preventive actions.",
             "I built a silent user verification solution for signup and login flows, integrating internal APIs and services.",
             "I implemented a Redis-backed job queue with a daily cron for asynchronous processing, plus Redis rate limiting on the login validation API to reduce friction between players and the platform.",
+            "I architect SPA applications with React and TypeScript, handling global state management and reusable componentization.",
+            "I built a WebSockets API for real-time communication between services and the platform.",
             "I optimized query performance and modeling in SQL Server, implementing caching and concurrency control.",
             "I handle sensitive data in compliance with LGPD, hashing information in tracking logs.",
-            "I document APIs with Swagger/OpenAPI, manage database versioning with Alembic, configure infrastructure (SSL, DNS, Firewall, Azure NSG) with Docker, Linux, and Nginx, integrate systems via RabbitMQ, and actively participate in code review through Pull Requests.",
+            "I document APIs with Swagger/OpenAPI, manage database versioning with Alembic (Python) and Prisma (Node.js), configure infrastructure (SSL, DNS, Firewall, Azure NSG) with Docker, Linux, and Nginx, integrate systems via RabbitMQ, write automated tests with Pytest, Vitest, and React Testing Library, and actively participate in code review through Pull Requests.",
           ],
         },
         {
@@ -84,7 +86,7 @@ export const portfolioContent: Record<"en" | "pt-br", PortfolioContent> = {
           problem:
             "Wearable apps are constrained by strict hardware limits and interaction models, requiring a lightweight yet maintainable architecture.",
           solution:
-            "Architected and built a complete MiniProgram in JavaScript for Zepp OS, paired with a Python backend for data processing, using a modular architecture with reactive state, storage, and UI helper layers.",
+            "Architected and built a complete MiniProgram in JavaScript for Zepp OS, paired with a Python backend for data processing, using a modular architecture with reactive state, storage, and UI helper layers. The UI adapts natively via Flex Layout to both round (480px) and square (390px) displays, with local persistence via LocalStorage and i18n support (en-US, pt-BR).",
           impact:
             "Delivered a fully working personal finance MiniProgram end-to-end, from the embedded frontend to backend data processing.",
           githubUrl: "https://github.com/FelipeRicardo5/cash-zepp-os",
@@ -129,11 +131,13 @@ export const portfolioContent: Record<"en" | "pt-br", PortfolioContent> = {
       title: "Technical Stack",
       categories: [
         { name: "Backend (Python)", skills: ["FastAPI", "Django", "Flask", "SQLAlchemy", "Celery", "Pydantic", "Alembic"] },
+        { name: "Backend (Node.js)", skills: ["NestJS", "Express", "TypeORM", "Prisma"] },
+        { name: "Frontend", skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Axios"] },
+        { name: "Real-Time", skills: ["WebSockets", "Socket.io"] },
         { name: "Databases", skills: ["PostgreSQL", "SQL Server", "MySQL", "MongoDB", "Redis"] },
         { name: "Architecture", skills: ["RESTful APIs", "Microservices", "RabbitMQ", "Event-Driven Architecture", "Amazon S3", "Swagger/OpenAPI"] },
         { name: "Infra & DevOps", skills: ["Docker", "Nginx", "Azure", "AWS", "CI/CD", "Git", "Linux"] },
-        { name: "Quality & Compliance", skills: ["Pytest", "SOLID", "Design Patterns", "Clean Architecture", "Code Review", "LGPD"] },
-        { name: "Frontend (Complementary)", skills: ["React", "Next.js", "TypeScript", "Tailwind CSS"] },
+        { name: "Quality & Compliance", skills: ["Pytest", "Jest", "Vitest", "React Testing Library", "ESLint", "SOLID", "Design Patterns", "Clean Architecture", "Code Review", "LGPD"] },
       ],
     },
     advantage: {
@@ -158,7 +162,7 @@ export const portfolioContent: Record<"en" | "pt-br", PortfolioContent> = {
     },
     socialLinks: {
       github: "https://github.com/FelipeRicardo5",
-      linkedin: "https://www.linkedin.com/in/felipericardo5",
+      linkedin: "https://www.linkedin.com/in/felipe-ricardo-developer",
       email: "felipe1ricardo158@gmail.com",
     },
     resumeUrl: "/resumeFelipeRicardo.pdf",
@@ -182,13 +186,13 @@ export const portfolioContent: Record<"en" | "pt-br", PortfolioContent> = {
       role: "Engenheiro Full Stack",
       headline: "Construindo APIs RESTful escaláveis, orientadas a eventos, e interfaces modernas.",
       subheadline:
-        "Projeto e entrego sistemas backend resilientes, APIs RESTful e microsserviços com FastAPI, Django e Flask — com atuação full stack prática também em ferramentas modernas de frontend.",
+        "Projeto e entrego sistemas backend resilientes, APIs RESTful e microsserviços com FastAPI/Django (Python) e NestJS/Express (Node.js) — com atuação full stack prática também com React e Next.js no frontend.",
       primaryCta: "Ver Projetos",
       secondaryCta: "Entrar em Contato",
     },
     about: {
       title: "Sobre",
-      body: "Felipe Ricardo é Desenvolvedor Back-end em Recife, Pernambuco, com experiência no desenvolvimento de APIs RESTful escaláveis, performáticas e orientadas a eventos para o setor de iGaming. Trabalho com FastAPI, Flask e Django para design e versionamento de serviços, autenticação e validações, aplicando clean architecture com integração entre sistemas via RabbitMQ e Redis. Documento APIs com Swagger/OpenAPI, garanto conformidade com a LGPD no tratamento de dados sensíveis, escrevo testes automatizados com Pytest e atuo em times ágeis (Scrum/Kanban). Também tenho formação em TypeScript, React e Next.js, o que me dá uma visão prática de frontend ao colaborar com esses times.",
+      body: "Felipe Ricardo é Desenvolvedor Fullstack em Recife, Pernambuco, construindo APIs RESTful escaláveis, orientadas a eventos, e sistemas em tempo real para o setor de iGaming com Python (FastAPI, Flask, Django) e Node.js (NestJS, Express). Arquiteto frontends SPA com React e TypeScript, entrego funcionalidades em tempo real com WebSockets, e integro sistemas via RabbitMQ e Redis. Documento APIs com Swagger/OpenAPI, garanto conformidade com a LGPD no tratamento de dados sensíveis, escrevo testes automatizados com Pytest e Vitest/React Testing Library, e atuo em times ágeis (Scrum/Kanban).",
     },
     experiences: {
       title: "Experiência Profissional",
@@ -198,17 +202,19 @@ export const portfolioContent: Record<"en" | "pt-br", PortfolioContent> = {
         {
           id: "bsa-corp",
           company: "BSA Corp",
-          role: "Desenvolvedor Back-end - Python",
+          role: "Desenvolvedor Fullstack - Python & Node.js",
           start: "Setembro 2025 - Presente",
           description:
             "Desenvolvo soluções tecnológicas orientadas a negócios para Jogo Responsável no ramo de iGaming, suportando as áreas de Customer Service e BetAssist.",
           highlights: [
-            "Implemento APIs RESTful em Python para monitoramento de players de alto risco e automação de ações preventivas.",
+            "Implemento APIs RESTful em Python e Node.js para monitoramento de players de alto risco e automação de ações preventivas.",
             "Desenvolvi uma solução de verificação silenciosa de usuários para os processos de cadastro e login, integrando APIs e serviços internos.",
             "Implementei fila de jobs com Redis e cron diário para processamento assíncrono, além de rate limiting via Redis na API de validação de login, reduzindo a fricção entre player e plataforma.",
+            "Arquiteto aplicações SPA com React e TypeScript, com gerenciamento de estado global e componentização reutilizável.",
+            "Desenvolvi uma API com WebSockets para comunicação em tempo real entre serviços e a plataforma.",
             "Otimizei performance e modelagem de queries no SQL Server, com implementação de cache e controle de concorrência.",
             "Trato dados sensíveis em conformidade com a LGPD, com hash de informações em logs de acompanhamento.",
-            "Documento APIs com Swagger/OpenAPI, controlo versionamento de banco de dados com Alembic, configuro infraestrutura (SSL, DNS, Firewall, Azure NSG) com Docker, Linux e Nginx, integro sistemas via RabbitMQ e participo ativamente de code review via Pull Requests.",
+            "Documento APIs com Swagger/OpenAPI, controlo versionamento de banco de dados com Alembic (Python) e Prisma (Node.js), configuro infraestrutura (SSL, DNS, Firewall, Azure NSG) com Docker, Linux e Nginx, integro sistemas via RabbitMQ, escrevo testes automatizados com Pytest, Vitest e React Testing Library, e participo ativamente de code review via Pull Requests.",
           ],
         },
         {
@@ -246,7 +252,7 @@ export const portfolioContent: Record<"en" | "pt-br", PortfolioContent> = {
           problem:
             "Apps para wearables são limitados por restrições rígidas de hardware e modelos de interação, exigindo uma arquitetura leve porém sustentável.",
           solution:
-            "Arquitetei e desenvolvi um MiniProgram completo em JavaScript para o Zepp OS, com backend em Python para processamento de dados, usando arquitetura modular com camadas de estado reativo, storage e helpers de UI.",
+            "Arquitetei e desenvolvi um MiniProgram completo em JavaScript para o Zepp OS, com backend em Python para processamento de dados, usando arquitetura modular com camadas de estado reativo, storage e helpers de UI. A UI se adapta nativamente via Flex Layout para telas redondas (480px) e quadradas (390px), com persistência local via LocalStorage e suporte a i18n (en-US, pt-BR).",
           impact:
             "Entreguei um MiniProgram pessoal de finanças completo, do frontend embarcado ao processamento de dados no backend.",
           githubUrl: "https://github.com/FelipeRicardo5/cash-zepp-os",
@@ -291,11 +297,13 @@ export const portfolioContent: Record<"en" | "pt-br", PortfolioContent> = {
       title: "Stack Técnica",
       categories: [
         { name: "Backend (Python)", skills: ["FastAPI", "Django", "Flask", "SQLAlchemy", "Celery", "Pydantic", "Alembic"] },
+        { name: "Backend (Node.js)", skills: ["NestJS", "Express", "TypeORM", "Prisma"] },
+        { name: "Frontend", skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Axios"] },
+        { name: "Tempo Real", skills: ["WebSockets", "Socket.io"] },
         { name: "Bancos de Dados", skills: ["PostgreSQL", "SQL Server", "MySQL", "MongoDB", "Redis"] },
         { name: "Arquitetura", skills: ["APIs RESTful", "Microservices", "RabbitMQ", "Event-Driven Architecture", "Amazon S3", "Swagger/OpenAPI"] },
         { name: "Infra e DevOps", skills: ["Docker", "Nginx", "Azure", "AWS", "CI/CD", "Git", "Linux"] },
-        { name: "Qualidade e Compliance", skills: ["Pytest", "SOLID", "Design Patterns", "Clean Architecture", "Code Review", "LGPD"] },
-        { name: "Frontend (Complementar)", skills: ["React", "Next.js", "TypeScript", "Tailwind CSS"] },
+        { name: "Qualidade e Compliance", skills: ["Pytest", "Jest", "Vitest", "React Testing Library", "ESLint", "SOLID", "Design Patterns", "Clean Architecture", "Code Review", "LGPD"] },
       ],
     },
     advantage: {
@@ -320,7 +328,7 @@ export const portfolioContent: Record<"en" | "pt-br", PortfolioContent> = {
     },
     socialLinks: {
       github: "https://github.com/FelipeRicardo5",
-      linkedin: "https://www.linkedin.com/in/felipericardo5",
+      linkedin: "https://www.linkedin.com/in/felipe-ricardo-developer",
       email: "felipe1ricardo158@gmail.com",
     },
     resumeUrl: "/resumeFelipeRicardo.pdf",
