@@ -31,6 +31,7 @@ export const portfolioContent: Record<"en" | "pt-br", PortfolioContent> = {
     experiences: {
       title: "Professional Experience",
       description: "Current roles where I deliver product value, engineering quality, and clear communication.",
+      highlightsLabel: "Key Contributions",
       items: [
         {
           id: "bsa-corp",
@@ -86,7 +87,7 @@ export const portfolioContent: Record<"en" | "pt-br", PortfolioContent> = {
             "Architected and built a complete MiniProgram in JavaScript for Zepp OS, paired with a Python backend for data processing, using a modular architecture with reactive state, storage, and UI helper layers.",
           impact:
             "Delivered a fully working personal finance MiniProgram end-to-end, from the embedded frontend to backend data processing.",
-          githubUrl: "",
+          githubUrl: "https://github.com/FelipeRicardo5/cash-zepp-os",
           liveUrl: "",
           linkStatus: "coming_soon",
         },
@@ -102,7 +103,7 @@ export const portfolioContent: Record<"en" | "pt-br", PortfolioContent> = {
             "Implemented collaborative workflows with structured task states, role-based updates, and responsive dashboards.",
           impact:
             "Improved execution clarity and team coordination through product-driven full stack implementation.",
-          githubUrl: "",
+          githubUrl: "https://github.com/FelipeRicardo5/taskSphere-backend",
           liveUrl: "",
           linkStatus: "coming_soon",
         },
@@ -118,7 +119,7 @@ export const portfolioContent: Record<"en" | "pt-br", PortfolioContent> = {
             "Built event-driven payment orchestration with robust API contracts and WebSocket delivery for real-time feedback.",
           impact:
             "Enabled responsive payment experiences with architecture that scales under concurrent load.",
-          githubUrl: "",
+          githubUrl: "https://github.com/FelipeRicardo5/api-payments-sockets",
           liveUrl: "",
           linkStatus: "coming_soon",
         },
@@ -160,7 +161,7 @@ export const portfolioContent: Record<"en" | "pt-br", PortfolioContent> = {
       linkedin: "https://www.linkedin.com/in/felipericardo5",
       email: "felipe1ricardo158@gmail.com",
     },
-    resumeUrl: "/resume-felipe-ricardo.pdf",
+    resumeUrl: "/resumeFelipeRicardo.pdf",
   },
   "pt-br": {
     locale: "pt-br",
@@ -192,6 +193,7 @@ export const portfolioContent: Record<"en" | "pt-br", PortfolioContent> = {
     experiences: {
       title: "Experiência Profissional",
       description: "Atuações atuais em que entrego valor de produto, qualidade de engenharia e comunicação clara.",
+      highlightsLabel: "Principais Contribuições",
       items: [
         {
           id: "bsa-corp",
@@ -247,7 +249,7 @@ export const portfolioContent: Record<"en" | "pt-br", PortfolioContent> = {
             "Arquitetei e desenvolvi um MiniProgram completo em JavaScript para o Zepp OS, com backend em Python para processamento de dados, usando arquitetura modular com camadas de estado reativo, storage e helpers de UI.",
           impact:
             "Entreguei um MiniProgram pessoal de finanças completo, do frontend embarcado ao processamento de dados no backend.",
-          githubUrl: "",
+          githubUrl: "https://github.com/FelipeRicardo5/cash-zepp-os",
           liveUrl: "",
           linkStatus: "coming_soon",
         },
@@ -279,7 +281,7 @@ export const portfolioContent: Record<"en" | "pt-br", PortfolioContent> = {
             "Construí orquestração de pagamentos orientada a eventos com contratos de API robustos e entrega em tempo real via WebSocket.",
           impact:
             "Viabilizou experiências de pagamento responsivas com arquitetura escalável sob carga concorrente.",
-          githubUrl: "",
+          githubUrl: "https://github.com/FelipeRicardo5/api-payments-sockets",
           liveUrl: "",
           linkStatus: "coming_soon",
         },
@@ -321,6 +323,6 @@ export const portfolioContent: Record<"en" | "pt-br", PortfolioContent> = {
       linkedin: "https://www.linkedin.com/in/felipericardo5",
       email: "felipe1ricardo158@gmail.com",
     },
-    resumeUrl: "/resume-felipe-ricardo.pdf",
+    resumeUrl: "/resumeFelipeRicardo.pdf",
   },
 };

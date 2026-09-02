@@ -1,4 +1,5 @@
-import { ChevronDown, Code2, ExternalLink } from "lucide-react";
+import { Code2, ExternalLink } from "lucide-react";
+import { Disclosure } from "@/components/site/disclosure";
 import type { PortfolioContent, Project } from "@/types/portfolio";
 
 const RULE_ACCENTS = ["bg-accent-blue", "bg-accent-green", "bg-accent-cyan"];
@@ -23,17 +24,15 @@ export function ProjectCard({
       <p className="mt-2.5 text-sm leading-7 text-muted-foreground">{project.summary}</p>
       <p className="mt-3 font-mono text-[11.5px] text-muted-foreground">{project.tech.join(" · ")}</p>
 
-      <details className="group mt-4 border-t border-border/80 pt-3.5">
-        <summary className="flex cursor-pointer list-none items-center justify-between font-mono text-[11.5px] text-foreground [&::-webkit-details-marker]:hidden">
-          {labels.breakdownLabel}
-          <ChevronDown className="h-3.5 w-3.5 text-muted-foreground transition-transform group-open:rotate-180" />
-        </summary>
-        <div className="mt-3.5 space-y-2.5 text-sm leading-6 text-muted-foreground">
-          <p><span className="font-medium text-foreground">{labels.problemLabel}:</span> {project.problem}</p>
-          <p><span className="font-medium text-foreground">{labels.solutionLabel}:</span> {project.solution}</p>
-          <p><span className="font-medium text-foreground">{labels.impactLabel}:</span> {project.impact}</p>
-        </div>
-      </details>
+      <div className="mt-4">
+        <Disclosure trigger={labels.breakdownLabel}>
+          <div className="mt-3.5 space-y-2.5 pb-0.5 text-sm leading-6 text-muted-foreground">
+            <p><span className="font-medium text-foreground">{labels.problemLabel}:</span> {project.problem}</p>
+            <p><span className="font-medium text-foreground">{labels.solutionLabel}:</span> {project.solution}</p>
+            <p><span className="font-medium text-foreground">{labels.impactLabel}:</span> {project.impact}</p>
+          </div>
+        </Disclosure>
+      </div>
 
       <div className="mt-auto flex flex-wrap items-center gap-x-3 gap-y-1 pt-5 font-mono text-[11.5px]">
         {project.githubUrl ? (

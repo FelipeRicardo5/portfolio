@@ -54,6 +54,7 @@ export type PortfolioContent = {
   experiences: {
     title: string;
     description: string;
+    highlightsLabel: string;
     items: Experience[];
   };
   projects: {
