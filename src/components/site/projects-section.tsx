@@ -12,10 +12,10 @@ export function ProjectsSection({ content }: { content: PortfolioContent }) {
         <h2 className="text-3xl font-semibold tracking-tight text-foreground">{content.projects.title}</h2>
         <p className="mt-4 max-w-3xl text-base leading-7 text-muted-foreground">{content.projects.description}</p>
       </Reveal>
-      <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+      <div className="mt-10 grid gap-x-8 gap-y-10 md:grid-cols-2 xl:grid-cols-3">
         {content.projects.items.map((project, index) => (
           <Reveal key={project.id} delay={0.06 * index}>
-            <ProjectCard project={project} labels={content.projects} />
+            <ProjectCard project={project} labels={content.projects} index={index} />
           </Reveal>
         ))}
       </div>

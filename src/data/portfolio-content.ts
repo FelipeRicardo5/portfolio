@@ -6,7 +6,7 @@ export const portfolioContent: Record<"en" | "pt-br", PortfolioContent> = {
     seo: {
       title: "Felipe Ricardo | Full Stack Engineer",
       description:
-        "Full Stack Engineer specialized in Python back-end (FastAPI, Django, Flask) building scalable APIs and modern interfaces.",
+        "Full Stack Engineer building scalable APIs and modern interfaces across the stack.",
     },
     navigation: {
       experience: "Experience",
@@ -18,7 +18,7 @@ export const portfolioContent: Record<"en" | "pt-br", PortfolioContent> = {
     hero: {
       name: "Felipe Ricardo",
       role: "Full Stack Engineer",
-      headline: "Building scalable, event-driven APIs with Python.",
+      headline: "Building scalable, event-driven APIs and modern interfaces.",
       subheadline:
         "I design and deliver resilient backend systems, RESTful APIs, and microservices with FastAPI, Django, and Flask — with practical full stack range through modern frontend tooling as well.",
       primaryCta: "View Projects",
@@ -167,7 +167,7 @@ export const portfolioContent: Record<"en" | "pt-br", PortfolioContent> = {
     seo: {
       title: "Felipe Ricardo | Engenheiro Full Stack",
       description:
-        "Engenheiro Full Stack especializado em back-end Python (FastAPI, Django, Flask), construindo APIs escaláveis e interfaces modernas.",
+        "Engenheiro Full Stack construindo APIs escaláveis e interfaces modernas em todas as camadas do stack.",
     },
     navigation: {
       experience: "Experiência",
@@ -179,7 +179,7 @@ export const portfolioContent: Record<"en" | "pt-br", PortfolioContent> = {
     hero: {
       name: "Felipe Ricardo",
       role: "Engenheiro Full Stack",
-      headline: "Construindo APIs RESTful escaláveis e orientadas a eventos com Python.",
+      headline: "Construindo APIs RESTful escaláveis, orientadas a eventos, e interfaces modernas.",
       subheadline:
         "Projeto e entrego sistemas backend resilientes, APIs RESTful e microsserviços com FastAPI, Django e Flask — com atuação full stack prática também em ferramentas modernas de frontend.",
       primaryCta: "Ver Projetos",
