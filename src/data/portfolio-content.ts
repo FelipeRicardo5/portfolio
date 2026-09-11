@@ -1,4 +1,8 @@
-import type { PortfolioContent } from "@/types/portfolio";
+import type { PortfolioContent, Post, Project } from "@/types/portfolio";
+import postsEn from "@/data/content/posts.en.json";
+import postsPtBr from "@/data/content/posts.pt-br.json";
+import projectsEn from "@/data/content/projects.en.json";
+import projectsPtBr from "@/data/content/projects.pt-br.json";
 
 export const portfolioContent: Record<"en" | "pt-br", PortfolioContent> = {
   en: {
@@ -11,6 +15,7 @@ export const portfolioContent: Record<"en" | "pt-br", PortfolioContent> = {
     navigation: {
       experience: "Experience",
       projects: "Projects",
+      posts: "Articles",
       contact: "Contact",
       switchLocale: "PT-BR",
       downloadResume: "Download Resume",
@@ -23,6 +28,7 @@ export const portfolioContent: Record<"en" | "pt-br", PortfolioContent> = {
         "I design and deliver resilient backend systems, RESTful APIs, and microservices with FastAPI/Django (Python) and NestJS/Express (Node.js) — with hands-on full stack range through React and Next.js on the frontend.",
       primaryCta: "View Projects",
       secondaryCta: "Contact Me",
+      stack: "Node.js | FastAPI | SpringBoot"
     },
     about: {
       title: "About",
@@ -76,56 +82,14 @@ export const portfolioContent: Record<"en" | "pt-br", PortfolioContent> = {
       githubLabel: "GitHub",
       liveLabel: "Live Demo",
       comingSoonLabel: "Link coming soon",
-      items: [
-        {
-          id: "cash-zepp-os",
-          title: "Cash - Zepp OS",
-          summary:
-            "Personal MiniProgram built for the Zepp OS wearable ecosystem (API Level 4.0), with a Python backend for data processing.",
-          tech: ["Zepp OS", "JavaScript", "Python", "Reactive State"],
-          problem:
-            "Wearable apps are constrained by strict hardware limits and interaction models, requiring a lightweight yet maintainable architecture.",
-          solution:
-            "Architected and built a complete MiniProgram in JavaScript for Zepp OS, paired with a Python backend for data processing, using a modular architecture with reactive state, storage, and UI helper layers. The UI adapts natively via Flex Layout to both round (480px) and square (390px) displays, with local persistence via LocalStorage and i18n support (en-US, pt-BR).",
-          impact:
-            "Delivered a fully working personal finance MiniProgram end-to-end, from the embedded frontend to backend data processing.",
-          githubUrl: "https://github.com/FelipeRicardo5/cash-zepp-os",
-          liveUrl: "",
-          linkStatus: "coming_soon",
-        },
-        {
-          id: "tasksphere",
-          title: "TaskSphere",
-          summary:
-            "Collaborative project management platform focused on clarity, team velocity, and predictable delivery.",
-          tech: ["Next.js", "TypeScript", "Node.js", "PostgreSQL"],
-          problem:
-            "Teams lose momentum when task ownership and status visibility are fragmented across tools.",
-          solution:
-            "Implemented collaborative workflows with structured task states, role-based updates, and responsive dashboards.",
-          impact:
-            "Improved execution clarity and team coordination through product-driven full stack implementation.",
-          githubUrl: "https://github.com/FelipeRicardo5/taskSphere-backend",
-          liveUrl: "",
-          linkStatus: "coming_soon",
-        },
-        {
-          id: "payments-api-websockets",
-          title: "Payments API + WebSockets",
-          summary:
-            "Scalable backend architecture for async payments and real-time transaction updates.",
-          tech: ["Node.js", "WebSockets", "Async Processing", "API Design"],
-          problem:
-            "Payment workflows require reliable async processing and immediate status updates for client applications.",
-          solution:
-            "Built event-driven payment orchestration with robust API contracts and WebSocket delivery for real-time feedback.",
-          impact:
-            "Enabled responsive payment experiences with architecture that scales under concurrent load.",
-          githubUrl: "https://github.com/FelipeRicardo5/api-payments-sockets",
-          liveUrl: "",
-          linkStatus: "coming_soon",
-        },
-      ],
+      items: projectsEn as Project[],
+    },
+    posts: {
+      title: "Articles",
+      description: "Writing published on LinkedIn about engineering, architecture, and product decisions.",
+      readMoreLabel: "Read on LinkedIn",
+      viewAllLabel: "View all articles",
+      items: postsEn as Post[],
     },
     skillsByCategory: {
       title: "Technical Stack",
@@ -177,6 +141,7 @@ export const portfolioContent: Record<"en" | "pt-br", PortfolioContent> = {
     navigation: {
       experience: "Experiência",
       projects: "Projetos",
+      posts: "Artigos",
       contact: "Contato",
       switchLocale: "EN",
       downloadResume: "Baixar Currículo",
@@ -189,6 +154,7 @@ export const portfolioContent: Record<"en" | "pt-br", PortfolioContent> = {
         "Projeto e entrego sistemas backend resilientes, APIs RESTful e microsserviços com FastAPI/Django (Python) e NestJS/Express (Node.js) — com atuação full stack prática também com React e Next.js no frontend.",
       primaryCta: "Ver Projetos",
       secondaryCta: "Entrar em Contato",
+      stack: "Node.js | FastAPI | SpringBoot"
     },
     about: {
       title: "Sobre",
@@ -242,56 +208,14 @@ export const portfolioContent: Record<"en" | "pt-br", PortfolioContent> = {
       githubLabel: "GitHub",
       liveLabel: "Demo",
       comingSoonLabel: "Link em breve",
-      items: [
-        {
-          id: "cash-zepp-os",
-          title: "Cash - Zepp OS",
-          summary:
-            "MiniProgram pessoal desenvolvido para o ecossistema wearable Zepp OS (API Level 4.0), com backend em Python para processamento de dados.",
-          tech: ["Zepp OS", "JavaScript", "Python", "Estado Reativo"],
-          problem:
-            "Apps para wearables são limitados por restrições rígidas de hardware e modelos de interação, exigindo uma arquitetura leve porém sustentável.",
-          solution:
-            "Arquitetei e desenvolvi um MiniProgram completo em JavaScript para o Zepp OS, com backend em Python para processamento de dados, usando arquitetura modular com camadas de estado reativo, storage e helpers de UI. A UI se adapta nativamente via Flex Layout para telas redondas (480px) e quadradas (390px), com persistência local via LocalStorage e suporte a i18n (en-US, pt-BR).",
-          impact:
-            "Entreguei um MiniProgram pessoal de finanças completo, do frontend embarcado ao processamento de dados no backend.",
-          githubUrl: "https://github.com/FelipeRicardo5/cash-zepp-os",
-          liveUrl: "",
-          linkStatus: "coming_soon",
-        },
-        {
-          id: "tasksphere",
-          title: "TaskSphere",
-          summary:
-            "Plataforma colaborativa de gestão de projetos focada em clareza, velocidade de time e previsibilidade de entrega.",
-          tech: ["Next.js", "TypeScript", "Node.js", "PostgreSQL"],
-          problem:
-            "Times perdem ritmo quando responsabilidade e visibilidade de status ficam fragmentadas em várias ferramentas.",
-          solution:
-            "Implementei fluxos colaborativos com estados de tarefa estruturados, atualizações por papel e dashboards responsivos.",
-          impact:
-            "Melhorou clareza de execução e coordenação do time por meio de implementação full stack orientada a produto.",
-          githubUrl: "https://github.com/FelipeRicardo5/taskSphere-backend",
-          liveUrl: "",
-          linkStatus: "coming_soon",
-        },
-        {
-          id: "payments-api-websockets",
-          title: "Payments API + WebSockets",
-          summary:
-            "Arquitetura backend escalável para pagamentos assíncronos e atualizações de transação em tempo real.",
-          tech: ["Node.js", "WebSockets", "Processamento Assíncrono", "Design de APIs"],
-          problem:
-            "Fluxos de pagamento exigem processamento assíncrono confiável e atualização imediata de status para clientes.",
-          solution:
-            "Construí orquestração de pagamentos orientada a eventos com contratos de API robustos e entrega em tempo real via WebSocket.",
-          impact:
-            "Viabilizou experiências de pagamento responsivas com arquitetura escalável sob carga concorrente.",
-          githubUrl: "https://github.com/FelipeRicardo5/api-payments-sockets",
-          liveUrl: "",
-          linkStatus: "coming_soon",
-        },
-      ],
+      items: projectsPtBr as Project[],
+    },
+    posts: {
+      title: "Artigos",
+      description: "Textos publicados no LinkedIn sobre engenharia, arquitetura e decisões de produto.",
+      readMoreLabel: "Ler no LinkedIn",
+      viewAllLabel: "Ver todos os artigos",
+      items: postsPtBr as Post[],
     },
     skillsByCategory: {
       title: "Stack Técnica",

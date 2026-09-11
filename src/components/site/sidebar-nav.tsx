@@ -12,8 +12,9 @@ export function SidebarNav({ content }: { content: PortfolioContent }) {
     { id: "overview", index: "01", label: content.hero.role },
     { id: "experience", index: "02", label: content.navigation.experience },
     { id: "projects", index: "03", label: content.navigation.projects },
-    { id: "skills", index: "04", label: content.skillsByCategory.title },
-    { id: "contact", index: "05", label: content.navigation.contact },
+    { id: "posts", index: "04", label: content.navigation.posts },
+    { id: "skills", index: "05", label: content.skillsByCategory.title },
+    { id: "contact", index: "06", label: content.navigation.contact },
   ];
   const ids = items.map((item) => item.id);
   const { registerRef, handleKeyDown } = useRovingTabIndex(ids, activePanel, setActivePanel, "vertical");

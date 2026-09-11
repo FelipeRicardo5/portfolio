@@ -1,0 +1,38 @@
+[
+  {
+    "id": "cash-zepp-os",
+    "title": "Cash - Zepp OS",
+    "summary": "Personal MiniProgram built for the Zepp OS wearable ecosystem (API Level 4.0), with a Python backend for data processing.",
+    "tech": ["Zepp OS", "JavaScript", "Python", "Reactive State"],
+    "problem": "Wearable apps are constrained by strict hardware limits and interaction models, requiring a lightweight yet maintainable architecture.",
+    "solution": "Architected and built a complete MiniProgram in JavaScript for Zepp OS, paired with a Python backend for data processing, using a modular architecture with reactive state, storage, and UI helper layers. The UI adapts natively via Flex Layout to both round (480px) and square (390px) displays, with local persistence via LocalStorage and i18n support (en-US, pt-BR).",
+    "impact": "Delivered a fully working personal finance MiniProgram end-to-end, from the embedded frontend to backend data processing.",
+    "githubUrl": "https://github.com/FelipeRicardo5/cash-zepp-os",
+    "liveUrl": "",
+    "linkStatus": "coming_soon"
+  },
+  {
+    "id": "tasksphere",
+    "title": "TaskSphere",
+    "summary": "Collaborative project management platform focused on clarity, team velocity, and predictable delivery.",
+    "tech": ["Next.js", "TypeScript", "Node.js", "PostgreSQL"],
+    "problem": "Teams lose momentum when task ownership and status visibility are fragmented across tools.",
+    "solution": "Implemented collaborative workflows with structured task states, role-based updates, and responsive dashboards.",
+    "impact": "Improved execution clarity and team coordination through product-driven full stack implementation.",
+    "githubUrl": "https://github.com/FelipeRicardo5/taskSphere-backend",
+    "liveUrl": "",
+    "linkStatus": "coming_soon"
+  },
+  {
+    "id": "payments-api-websockets",
+    "title": "Payments API + WebSockets",
+    "summary": "Scalable backend architecture for async payments and real-time transaction updates.",
+    "tech": ["Node.js", "WebSockets", "Async Processing", "API Design"],
+    "problem": "Payment workflows require reliable async processing and immediate status updates for client applications.",
+    "solution": "Built event-driven payment orchestration with robust API contracts and WebSocket delivery for real-time feedback.",
+    "impact": "Enabled responsive payment experiences with architecture that scales under concurrent load.",
+    "githubUrl": "https://github.com/FelipeRicardo5/api-payments-sockets",
+    "liveUrl": "",
+    "linkStatus": "coming_soon"
+  }
+]

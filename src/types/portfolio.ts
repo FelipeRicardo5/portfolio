@@ -17,6 +17,16 @@ export type Project = {
   linkStatus: ProjectLinkStatus;
 };
 
+export type Post = {
+  id: string;
+  title: string;
+  summary: string;
+  url: string;
+  publishedAt: string;
+  source?: string;
+  image?: string;
+};
+
 export type Experience = {
   id: string;
   company: string;
@@ -35,6 +45,7 @@ export type PortfolioContent = {
   navigation: {
     experience: string;
     projects: string;
+    posts: string;
     contact: string;
     switchLocale: string;
     downloadResume: string;
@@ -46,6 +57,7 @@ export type PortfolioContent = {
     subheadline: string;
     primaryCta: string;
     secondaryCta: string;
+    stack: string;
   };
   about: {
     title: string;
@@ -68,6 +80,13 @@ export type PortfolioContent = {
     liveLabel: string;
     comingSoonLabel: string;
     items: Project[];
+  };
+  posts: {
+    title: string;
+    description: string;
+    readMoreLabel: string;
+    viewAllLabel: string;
+    items: Post[];
   };
   skillsByCategory: {
     title: string;

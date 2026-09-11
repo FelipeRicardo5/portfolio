@@ -2,7 +2,7 @@
 
 import { createContext, useContext, useState, type ReactNode } from "react";
 
-export const PANEL_IDS = ["overview", "experience", "projects", "skills", "contact"] as const;
+export const PANEL_IDS = ["overview", "experience", "projects", "posts", "skills", "contact"] as const;
 
 export type PanelId = (typeof PANEL_IDS)[number];
 
@@ -14,7 +14,12 @@ type PanelContextValue = {
 const PanelContext = createContext<PanelContextValue | null>(null);
 
 export function PanelProvider({ children }: { children: ReactNode }) {
-  const [activePanel, setActivePanel] = useState<PanelId>("overview");
+  const [activePanel, setActivePanelState] = useState<PanelId>("overview");
+
+  const setActivePanel = (id: PanelId) => {
+    setActivePanelState(id);
+    window.scrollTo({ top: 0 });
+  };
 
   return <PanelContext.Provider value={{ activePanel, setActivePanel }}>{children}</PanelContext.Provider>;
 }

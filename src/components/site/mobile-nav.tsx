@@ -13,6 +13,7 @@ export function MobileNav({ content }: { content: PortfolioContent }) {
     { id: "overview", code: isPtBr ? "VG" : "OV", label: isPtBr ? "Visão Geral" : "Overview" },
     { id: "experience", code: "EX", label: content.navigation.experience },
     { id: "projects", code: "PR", label: content.navigation.projects },
+    { id: "posts", code: "AR", label: content.navigation.posts },
     { id: "skills", code: isPtBr ? "ST" : "SK", label: content.skillsByCategory.title },
     { id: "contact", code: "CT", label: content.navigation.contact },
   ];

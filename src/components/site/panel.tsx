@@ -8,7 +8,14 @@ export function Panel({ id, label, children }: { id: PanelId; label: string; chi
   const isActive = activePanel === id;
 
   return (
-    <div id={`panel-${id}`} role="tabpanel" aria-label={label} hidden={!isActive} aria-hidden={!isActive}>
+    <div
+      id={`panel-${id}`}
+      role="tabpanel"
+      aria-label={label}
+      hidden={!isActive}
+      aria-hidden={!isActive}
+      className="[&>section:first-child]:pt-6 md:[&>section:first-child]:pt-10"
+    >
       {children}
     </div>
   );

@@ -8,7 +8,6 @@ import type { PortfolioContent } from "@/types/portfolio";
 
 export function HeroSection({ content }: { content: PortfolioContent }) {
   const { setActivePanel } = usePanel();
-  const stack = content.skillsByCategory.categories[0]?.skills.slice(0, 3) ?? [];
 
   return (
     <section className="mx-auto grid w-full max-w-6xl items-center gap-10 px-6 pb-16 pt-18 md:grid-cols-[1.1fr_0.9fr] md:px-10 md:pb-24 md:pt-24">
@@ -107,15 +106,7 @@ export function HeroSection({ content }: { content: PortfolioContent }) {
               <span className="text-accent">&quot;role&quot;</span>: <span className="text-accent-cyan">&quot;{content.hero.role}&quot;</span>,
             </p>
             <p className="pl-4">
-              <span className="text-accent">&quot;stack&quot;</span>:{" "}
-              [
-              {stack.map((tech, index) => (
-                <span key={tech}>
-                  <span className="text-accent-cyan">&quot;{tech}&quot;</span>
-                  {index < stack.length - 1 ? ", " : ""}
-                </span>
-              ))}
-              ],
+              <span className="text-accent">&quot;stack&quot;</span>: <span className="text-accent-cyan">&quot;{content.hero.stack}&quot;</span>,
             </p>
             <p className="pl-4">
               <span className="text-accent">&quot;status&quot;</span>: <span className="text-accent-green">200</span>

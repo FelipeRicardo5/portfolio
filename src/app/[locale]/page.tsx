@@ -10,6 +10,7 @@ import { HeroSection } from "@/components/site/hero-section";
 import { MobileNav } from "@/components/site/mobile-nav";
 import { Panel } from "@/components/site/panel";
 import { PanelProvider } from "@/components/site/panel-context";
+import { PostsSection } from "@/components/site/posts-section";
 import { ProjectsSection } from "@/components/site/projects-section";
 import { SidebarNav } from "@/components/site/sidebar-nav";
 import { SiteFooter } from "@/components/site/site-footer";
@@ -72,7 +73,7 @@ export default async function LocalePage({ params }: { params: Promise<{ locale:
 
   return (
     <div className="relative" lang={locale === "pt-br" ? "pt-BR" : "en"}>
-      <BackgroundEffects />
+      <BackgroundEffects /> 
       <PanelProvider>
         <SiteHeader locale={locale} content={content} />
         <AppShell sidebar={<SidebarNav content={content} />}>
@@ -87,6 +88,9 @@ export default async function LocalePage({ params }: { params: Promise<{ locale:
             </Panel>
             <Panel id="projects" label={content.navigation.projects}>
               <ProjectsSection content={content} />
+            </Panel>
+            <Panel id="posts" label={content.navigation.posts}>
+              <PostsSection content={content} />
             </Panel>
             <Panel id="skills" label={content.skillsByCategory.title}>
               <SkillsSection content={content} />
